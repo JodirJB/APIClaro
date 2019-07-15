@@ -1,0 +1,18 @@
+<ion-header no-border> 
+  <ion-toolbar color="dark">
+    <ion-title>
+      API
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor=" let user of users" routerLink="/information" detail>
+      <ion-avatar slot="start">
+        <img [src]="user.picture.medium">
+      </ion-avatar>
+      <h2>{{ user.name.first | uppercase}} {{ user.name.last | uppercase }}</h2>
+    </ion-item>
+  </ion-list>
+</ion-content>
